@@ -1,0 +1,51 @@
+STATE,NEIGHBORS,NUM_OF_N
+Alabama,"Florida, Georgia, Mississippi, Tennessee",4
+Alaska,N/A,0
+Arizona,"California, Colorado, Nevada, New_Mexico, Utah",5
+Arkansas,"Louisiana, Mississippi, Missouri, Oklahoma, Tennessee, Texas",6
+California,"Arizona, Nevada, Oregon",3
+Colorado,"Arizona, Kansas, Nebraska, New_Mexico, Oklahoma, Utah, Wyoming",7
+Connecticut,"Massachusetts, New_York, Rhode_Island",3
+Delaware,"Maryland, New_Jersey, Pennsylvania",3
+Florida,"Alabama, Georgia",2
+Georgia,"Alabama, Florida, North_Carolina, South_Carolina, Tennessee",5
+Hawaii,N/A,0
+Idaho,"Montana, Nevada, Oregon, Utah, Washington, Wyoming",6
+Illinois,"Indiana, Iowa, Michigan, Kentucky, Missouri, Wisconsin",6
+Indiana,"Illinois, Kentucky, Michigan, Ohio",4
+Iowa,"Illinois, Minnesota, Missouri, Nebraska, South_Dakota, Wisconsin",6
+Kansas,"Colorado, Missouri, Nebraska, Oklahoma",4
+Kentucky,"Illinois, Indiana, Missouri, Ohio, Tennessee, Virginia, West_Virginia",7
+Louisiana,"Arkansas, Mississippi, Texas",3
+Maine,New_Hampshire,1
+Maryland,"Delaware, Pennsylvania, Virginia, West Virginia",4
+Massachusetts,"Connecticut, New_Hampshire, New_York, Rhode Island, Vermont",5
+Michigan,"Illinois, Indiana, Minnesota, Ohio, Wisconsin",5
+Minnesota,"Iowa, Michigan, North_Dakota, South_Dakota, Wisconsin",5
+Mississippi,"Alabama, Arkanssas, Louisiana, Tennessee",4
+Missouri,"Arkansas, Illinois, Iowa, Kansas, Kentucky, Nebraska, Oklahoma, Tennessee",8
+Montana,"Idaho, North_Dakota, South_Dakota, Wyoming",4
+Nebraska,"Colorado, Iowa, Kansas, Missouri, South_Dakota, Wyoming",6
+Nevada,"Arizona, California, Idaho, Oregon, Utah",5
+New_Hampshire,"Maine, Massachusetts, Vermont",3
+New_Jersey,"Delaware, New York, Pennsylvania",3
+New_Mexico,"Arizona, Colorado, Oklahoma, Texas, Utah",5
+New_York,"Connecticut, Massachusetts, New_Jersey, Pennsylvania, Rhode_Island, Vermont",6
+North_Carolina,"Georgia, South_Carolina, Tennessee, Virginia",4
+North_Dakota,"Minnesota, Montana, South Dakota",3
+Ohio,"Indiana, Kentucky, Michigan, Pennsylvania, West_Virginia",5
+Oklahoma,"Arkansas, Colorado, Kansas, Missouri, New_Mexico, Texas",6
+Oregon,"California, Idaho, Nevada, Washington",4
+Pennsylvania,"Delaware, Maryland, New_Jersey, New_York, Ohio, West_Virginia",6
+Rhode Island,"Connecticut, Massachusetts, New_York",3
+South_Carolina,"Georgia, North_Carolina",2
+South_Dakota,"Iowa, Minnesota, Montana, Nebraska, North_Dakota, Wyoming",6
+Tennessee,"Alabama, Arkansas, Georgia, Kentucky, Mississippi, Missouri, North_Carolina, Virginia",8
+Texas,"Arkansas, Louisiana, New_Mexico, Oklahoma",4
+Utah,"Arizona, Colorado, Idaho, Nevada, New_Mexico, Wyoming",6
+Vermont,"Massachusetts, New_Hampshire, New_York",3
+Virginia,"Kentucky, Maryland, North_Carolina, Tennessee, West_Virginia",5
+Washington,"Idaho, Oregon",2
+West_Virginia,"Kentucky, Maryland, Ohio, Pennsylvania, Virginia",5
+Wisconsin,"Illinois, Iowa, Michigan, Minnesota",4
+Wyoming,"Colorado, Idaho, Montana, Nebraska, South_Dakota, Utah",6
