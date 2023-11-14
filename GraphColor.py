@@ -23,7 +23,8 @@ for i in range(len(state_data)):
     state_neighbors = [x.strip(' ') for x in state_neighbors]
     if state_neighbors[0] == 'N/A':
         state_neighbors = []
-    states[state_name] = [None, state_neighbors]
+    state_num_neighbors = int(state_data[i][2])
+    states[state_name] = [None, state_neighbors, state_num_neighbors]
 
 print(states)
 
@@ -139,4 +140,52 @@ def color_graph_breadth_first(states) -> dict:
 
     return states
 
-print(color_graph_breadth_first(states))
+
+def color_graph_most_neighbors(states):
+    colors = ["blue", "pink", "orange", "yellow"]
+    visited = set()
+    queue = deque()
+    while (len(visited) != 48):
+        # find the state with the most neighbors that hasn't already been visited
+        max = 0
+        for state in states.keys():
+            if states[state][2] > max and state not in visited:
+                max = states[state][2]
+                maxState = state
+
+        # color the maxState and its neighbors, mark it and all of its neighbors as visited
+        queue.append(maxState)
+        for neighbor in states[maxState][1]:
+            if neighbor not in visited and neighbor not in queue:
+                queue.append(neighbor)
+        
+        # color in the max state and its neighbors
+        while queue:
+            current_state = queue.popleft()
+            visited.add(current_state)
+            try:
+                # Determine the color for the current state
+                neighbor_colors = {states[neighbor][0] for neighbor in states[current_state][1] if states[neighbor][0] is not None}
+                color_assigned = False
+
+                for color in colors:
+                    if color not in neighbor_colors:
+                        states[current_state][0] = color
+                        color_assigned = True
+                        print(current_state, "is", color)
+                        break
+
+                if not color_assigned: # raise an error if coloring failed
+                    raise ValueError(f"Unable to assign color to state {current_state}")
+
+            except ValueError as e:
+                print(f"Error occurred: {e}")
+
+    for state in states.keys():
+        if states[state][0] is None: # if a state is not yet colored
+            states[state][0] = colors[0] # give it the first color because it has no neighbors
+            print(state, "is", colors[0])
+
+    return states
+
+print(color_graph_most_neighbors(states))
