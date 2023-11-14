@@ -1,3 +1,7 @@
+# Names: Jessica Klurfeld and Michelle Lawson
+# Peers: N/A
+# References: Lesly Gonzalez Herrera’s States.csv.csv file from the #technews channel
+
 # This algorithm finds the greedy method to color a graph so that no neighboring states have the same color.
 
 import csv
