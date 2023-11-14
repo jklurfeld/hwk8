@@ -127,9 +127,11 @@ def color_graph_breadth_first(states) -> dict:
                 queue.append(neighbor)
     
     # Color isolated states
+    # if an error occurred, then it just colors it blue at the end
     for state in states.keys():
         if states[state][0] is None: # if a state is not yet colored
             states[state][0] = colors[0] # give it the first color because it has no neighbors
+            print(state, "is", colors[0])
 
     return states
 
