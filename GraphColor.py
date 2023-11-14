@@ -86,7 +86,7 @@ def color_graph_most_connected(states) -> dict:
 
 
 def color_graph_breadth_first(states) -> dict:
-    # Breadth first search inspireed approach
+    # Breadth first search inspired approach
     # Color each node by spreading out from a corner of the graph
 
     # Start from topmost westmost state
@@ -112,6 +112,7 @@ def color_graph_breadth_first(states) -> dict:
                 if color not in neighbor_colors:
                     states[current_state][0] = color
                     color_assigned = True
+                    print(current_state, "is", color)
                     break
 
             if not color_assigned: # raise an error if coloring failed
@@ -131,3 +132,5 @@ def color_graph_breadth_first(states) -> dict:
             states[state][0] = colors[0] # give it the first color because it has no neighbors
 
     return states
+
+print(color_graph_breadth_first(states))
