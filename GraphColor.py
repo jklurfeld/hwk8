@@ -125,4 +125,9 @@ def color_graph_breadth_first(states) -> dict:
             if neighbor not in visited and neighbor not in queue:
                 queue.append(neighbor)
     
+    # Color isolated states
+    for state in states.keys():
+        if states[state][0] is None: # if a state is not yet colored
+            states[state][0] = colors[0] # give it the first color because it has no neighbors
+
     return states
