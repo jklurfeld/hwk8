@@ -18,26 +18,26 @@ Kansas,"Colorado, Missouri, Nebraska, Oklahoma",4
 Kentucky,"Illinois, Indiana, Missouri, Ohio, Tennessee, Virginia, West_Virginia",7
 Louisiana,"Arkansas, Mississippi, Texas",3
 Maine,New_Hampshire,1
-Maryland,"Delaware, Pennsylvania, Virginia, West Virginia",4
-Massachusetts,"Connecticut, New_Hampshire, New_York, Rhode Island, Vermont",5
+Maryland,"Delaware, Pennsylvania, Virginia, West_Virginia",4
+Massachusetts,"Connecticut, New_Hampshire, New_York, Rhode_Island, Vermont",5
 Michigan,"Illinois, Indiana, Minnesota, Ohio, Wisconsin",5
 Minnesota,"Iowa, Michigan, North_Dakota, South_Dakota, Wisconsin",5
-Mississippi,"Alabama, Arkanssas, Louisiana, Tennessee",4
+Mississippi,"Alabama, Arkansas, Louisiana, Tennessee",4
 Missouri,"Arkansas, Illinois, Iowa, Kansas, Kentucky, Nebraska, Oklahoma, Tennessee",8
 Montana,"Idaho, North_Dakota, South_Dakota, Wyoming",4
 Nebraska,"Colorado, Iowa, Kansas, Missouri, South_Dakota, Wyoming",6
 Nevada,"Arizona, California, Idaho, Oregon, Utah",5
 New_Hampshire,"Maine, Massachusetts, Vermont",3
-New_Jersey,"Delaware, New York, Pennsylvania",3
+New_Jersey,"Delaware, New_York, Pennsylvania",3
 New_Mexico,"Arizona, Colorado, Oklahoma, Texas, Utah",5
 New_York,"Connecticut, Massachusetts, New_Jersey, Pennsylvania, Rhode_Island, Vermont",6
 North_Carolina,"Georgia, South_Carolina, Tennessee, Virginia",4
-North_Dakota,"Minnesota, Montana, South Dakota",3
+North_Dakota,"Minnesota, Montana, South_Dakota",3
 Ohio,"Indiana, Kentucky, Michigan, Pennsylvania, West_Virginia",5
 Oklahoma,"Arkansas, Colorado, Kansas, Missouri, New_Mexico, Texas",6
 Oregon,"California, Idaho, Nevada, Washington",4
 Pennsylvania,"Delaware, Maryland, New_Jersey, New_York, Ohio, West_Virginia",6
-Rhode Island,"Connecticut, Massachusetts, New_York",3
+Rhode_Island,"Connecticut, Massachusetts, New_York",3
 South_Carolina,"Georgia, North_Carolina",2
 South_Dakota,"Iowa, Minnesota, Montana, Nebraska, North_Dakota, Wyoming",6
 Tennessee,"Alabama, Arkansas, Georgia, Kentucky, Mississippi, Missouri, North_Carolina, Virginia",8
