@@ -142,9 +142,14 @@ def color_graph_breadth_first(states) -> dict:
 
 
 def color_graph_most_neighbors(states):
+    # colors a graph by coloring the states with the most neighbors first (and all of their neighbors)
+    # note: does not take into account whether those neighbors have already been colored, only cares about the number of neighbors
+
     colors = ["blue", "pink", "orange", "yellow"]
     visited = set()
     queue = deque()
+
+    # visits the 48 contiguous United States first
     while (len(visited) != 48):
         # find the state with the most neighbors that hasn't already been visited
         max = 0
@@ -181,6 +186,7 @@ def color_graph_most_neighbors(states):
             except ValueError as e:
                 print(f"Error occurred: {e}")
 
+    # color isolated states
     for state in states.keys():
         if states[state][0] is None: # if a state is not yet colored
             states[state][0] = colors[0] # give it the first color because it has no neighbors
