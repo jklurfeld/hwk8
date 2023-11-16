@@ -145,7 +145,7 @@ def color_graph_most_neighbors(states):
     # colors a graph by coloring the states with the most neighbors first (and all of their neighbors)
     # note: does not take into account whether those neighbors have already been colored, only cares about the number of neighbors
 
-    colors = ["blue", "pink", "orange", "yellow"]
+    colors = ["blue", "pink", "green", "yellow"]
     visited = set()
     queue = deque()
 
