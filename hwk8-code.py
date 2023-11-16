@@ -31,9 +31,9 @@ def color_graph_breadth_first(states) -> dict:
     """
     Colors each state in the graph using a breadth-first search inspired approach, such that no two neighboring states are the same color.
 
-    :param states: (dict) A dictionary where each key is a state and its value is a tuple containing its color (initially None) and a list of its neighboring states.
+    :param states: (dict) A dictionary where each key is a state and its value is a list containing its color (initially None), a list of its neighboring states, and the number of neighbors.
 
-    :return: (dict) A dictionary with the updated states where each key is a state and its value is a tuple containing its color and a list of its neighboring states.
+    :return: (dict) A dictionary with the updated states where each key is a state and its value is a list containing its color and a list of its neighboring states, and the number of neighbors.
     """
     # Breadth first search inspired approach
     # Color each node by spreading out from a corner of the graph
@@ -89,9 +89,9 @@ def color_graph_most_neighbors(states):
     """
     Starting from the state with the most neighbors, colors each state in the graph such that no two neighboring states are the same color.
 
-    :param states: (dict) A dictionary where each key is a state and its value is a tuple containing its color (initially None) and a list of its neighboring states.
+    :param states: (dict) A dictionary where each key is a state and its value is a list containing its color (initially None), a list of its neighboring states, and the number of neighbors.
     
-    :return: (dict) A dictionary with the updated states where each key is a state and its value is a tuple containing its color and a list of its neighboring states.
+    :return: (dict) A dictionary with the updated states where each key is a state and its value is a list containing its color and a list of its neighboring states, and the number of neighbors.
     """
     # colors a graph by coloring the states with the most neighbors first (and all of their neighbors)
     # note: does not take into account whether those neighbors have already been colored, only cares about the number of neighbors
