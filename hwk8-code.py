@@ -97,7 +97,7 @@ def color_graph_breadth_first(states) -> dict:
     # Start from topmost westmost state
     start_state = 'Washington'
 
-    colors = ["blue", "red", "green", "yellow"]
+    colors = ["blue", "pink", "green", "yellow"]
     visited = set()
     queue = deque()
 
@@ -194,4 +194,4 @@ def color_graph_most_neighbors(states):
 
     return states
 
-print(color_graph_most_neighbors(states))
+print(color_graph_breadth_first(states))
