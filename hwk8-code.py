@@ -26,71 +26,15 @@ for i in range(len(state_data)):
     state_num_neighbors = int(state_data[i][2])
     states[state_name] = [None, state_neighbors, state_num_neighbors]
 
-print(states)
-
-
-"""
-Solution idea:
-- pick the state with the most neighbors and color it and color all of its neighbors
-- pick the next state with the most neighbors and color it and color all of its neighbors
-- repeat until all states are colored
-"""
-
-
-def color_graph_simple(states) -> dict:
-    # Color each node by simply going through the states from top of the dict to the bottom
-    colors = ["blue", "red", "green", "yellow"]
-    colorCounter = 0
-
-    # Give states colors one after the other
-    for state in states.keys():
-        # set of colors of the neigbhors
-        neighbor_colors = {states[neighbor][0] for neighbor in states[state][1] if states[neighbor][0] is not None}
-
-        # color it the first color that no neighbor has
-        colorCounter = 0    
-        while colors[colorCounter] in neighbor_colors:
-            colorCounter += 1
-        
-        # set the color of the state
-        states[state][0] = colors[colorCounter]
-
-        print(state, " is ", states[state][0])
-    
-    return states
-
-
-def color_graph_most_connected(states) -> dict:
-    # Color each node by going through the states from most connected to least connected
-    colors = ["blue", "red", "green", "yellow"]
-    colorCounter = 0
-
-    # Sort the states by number of neighbors using bubble sort  
-    for i in range(len(states)):
-        for j in range(len(states)):
-            if len(states[list(states.keys())[i]][1]) > len(states[list(states.keys())[j]][1]):
-                states[list(states.keys())[i]], states[list(states.keys())[j]] = states[list(states.keys())[j]], states[list(states.keys())[i]]
-
-
-    # Give states colors one after the other
-    for state in states.keys():
-        # set of colors of the neigbhors
-        neighbor_colors = {states[neighbor][0] for neighbor in states[state][1] if states[neighbor][0] is not None}
-
-        # color it the first color that no neighbor has
-        colorCounter = 0    
-        while colors[colorCounter] in neighbor_colors:
-            colorCounter += 1
-        
-        # set the color of the state
-        states[state][0] = colors[colorCounter]
-
-        print(state, " is ", states[state][0])
-    
-    return states
-
 
 def color_graph_breadth_first(states) -> dict:
+    """
+    Colors each state in the graph using a breadth-first search inspired approach, such that no two neighboring states are the same color.
+
+    :param states: (dict) A dictionary where each key is a state and its value is a tuple containing its color (initially None) and a list of its neighboring states.
+
+    :return: (dict) A dictionary with the updated states where each key is a state and its value is a tuple containing its color and a list of its neighboring states.
+    """
     # Breadth first search inspired approach
     # Color each node by spreading out from a corner of the graph
 
@@ -117,7 +61,7 @@ def color_graph_breadth_first(states) -> dict:
                 if color not in neighbor_colors:
                     states[current_state][0] = color
                     color_assigned = True
-                    print(current_state, "is", color)
+                    # print(current_state, "is", color)
                     break
 
             if not color_assigned: # raise an error if coloring failed
@@ -136,12 +80,19 @@ def color_graph_breadth_first(states) -> dict:
     for state in states.keys():
         if states[state][0] is None: # if a state is not yet colored
             states[state][0] = colors[0] # give it the first color because it has no neighbors
-            print(state, "is", colors[0])
+            # print(state, "is", colors[0])
 
     return states
 
 
 def color_graph_most_neighbors(states):
+    """
+    Starting from the state with the most neighbors, colors each state in the graph such that no two neighboring states are the same color.
+
+    :param states: (dict) A dictionary where each key is a state and its value is a tuple containing its color (initially None) and a list of its neighboring states.
+    
+    :return: (dict) A dictionary with the updated states where each key is a state and its value is a tuple containing its color and a list of its neighboring states.
+    """
     # colors a graph by coloring the states with the most neighbors first (and all of their neighbors)
     # note: does not take into account whether those neighbors have already been colored, only cares about the number of neighbors
 
@@ -177,7 +128,7 @@ def color_graph_most_neighbors(states):
                     if color not in neighbor_colors:
                         states[current_state][0] = color
                         color_assigned = True
-                        print(current_state, "is", color)
+                        # print(current_state, "is", color)
                         break
 
                 if not color_assigned: # raise an error if coloring failed
@@ -190,7 +141,7 @@ def color_graph_most_neighbors(states):
     for state in states.keys():
         if states[state][0] is None: # if a state is not yet colored
             states[state][0] = colors[0] # give it the first color because it has no neighbors
-            print(state, "is", colors[0])
+            # print(state, "is", colors[0])
 
     return states
 
